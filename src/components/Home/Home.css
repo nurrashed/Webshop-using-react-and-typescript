@@ -1,0 +1,16 @@
+.cardHeight{
+    height: 550px;
+    width: 600px;
+    padding-bottom: 20px;
+}
+
+.image{
+height: 350px;
+width: 270px;
+}
+
+button{
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
