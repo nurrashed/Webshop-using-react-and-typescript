@@ -1,5 +1,5 @@
 import React,{ChangeEvent, useState} from 'react';
-import { Card, Grid, Item} from 'semantic-ui-react';
+import { Card, Grid} from 'semantic-ui-react';
 import {ICartItem} from '../../App';
 import Axios from 'axios';
 
@@ -26,7 +26,7 @@ export default function Cart(props:ICartProps) {
   console.log(props);
   const [customerEmail, setCustomerEmail] = useState('');
 
-  const tempMessage = props.message;
+  //const tempMessage = props.message;
   const clearMovie = () =>{
     props.clearItem();
   }
@@ -76,7 +76,7 @@ export default function Cart(props:ICartProps) {
               <Card.Content>
                 <Card.Header>{movie.product.name}</Card.Header>                  
                 <Card.Description>
-                      <img className="image" src={movie.product.imageUrl} alt="Movie image"/>
+                      <img className="image" src={movie.product.imageUrl} alt="Movie"/>
                       <p>Price: {movie.product.price} x {movie.amount}</p>
                       {/* <button type='button' onClick={()=>clickHandel(movie)}>Add to Cart</button> */}
                 </Card.Description>

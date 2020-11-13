@@ -36,8 +36,8 @@ export default function Admin() {
 
    let orderHtml = orders.map((order:IOrder)=>{
         return(
-            <div>
-                <p key={order.id}>Order id is: {order.id} and created by: {order.createdBy}</p>
+            <div key={order.id}>
+                <p>Order id is: {order.id} and created by: {order.createdBy}</p>
                 <button type='button' onClick={()=>deleteOrder(order.id)}>Delete Order</button>
             </div>
         );

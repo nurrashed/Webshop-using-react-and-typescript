@@ -18,7 +18,7 @@ export default function Home(props:IDataprops) {
 
     const defaultValue:IMovie[]=[];
     const [movies, setMovies]=useState(defaultValue);
-    const [cart, setCart] = useState(defaultValue);
+    //const [cart, setCart] = useState(defaultValue);
     useEffect(()=>{
         axios.get('https://medieinstitutet-wie-products.azurewebsites.net/api/products')
             .then(result=>{
@@ -42,7 +42,7 @@ let movieHtml = movies.map((movie:IMovie)=>{
                         <Card.Header>{movie.name}</Card.Header>
                     
                         <Card.Description>
-                        <img className="image" src={movie.imageUrl} alt="Movie image"/>
+                        <img className="image" src={movie.imageUrl} alt="Movie"/>
                         <p>Price: {movie.price}</p>
                         <button type='button' onClick={()=>clickHandel(movie)}>Add to Cart</button>
                         </Card.Description>
