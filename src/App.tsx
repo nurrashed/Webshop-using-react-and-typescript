@@ -38,6 +38,7 @@ function App() {
   }
   console.log('Cart: ', cart.length);
   }
+  
   /* Remove from Cart */
   function removeFromCart(movie:IMovie){
     let tempCart = cart;

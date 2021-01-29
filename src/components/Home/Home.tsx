@@ -14,6 +14,7 @@ export interface IMovie{
 interface IDataprops{
     updateMovie(movie:IMovie): void;
 }
+
 export default function Home(props:IDataprops) {
 
     const defaultValue:IMovie[]=[];

@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-
-
-
 interface IOrder{
     id:number,
     createdBy: string
 } 
-
-
 export default function Admin() {
 
     
@@ -21,9 +16,7 @@ export default function Admin() {
     })
     },[]);
 
-
-    async function deleteOrder(id: number) {
- 
+    async function deleteOrder(id: number) { 
         axios.delete(`https://medieinstitutet-wie-products.azurewebsites.net/api/orders/${id}`)
             .then(result => {
             console.log(result);
@@ -31,8 +24,6 @@ export default function Admin() {
             setOrders(filteredOrders);
         }); 
     };
-
-   
 
    let orderHtml = orders.map((order:IOrder)=>{
         return(
@@ -42,7 +33,7 @@ export default function Admin() {
             </div>
         );
    });
-
+   
     return (
         <>
             {orderHtml}
